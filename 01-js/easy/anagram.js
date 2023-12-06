@@ -7,6 +7,7 @@
 function isAnagram(str1, str2) {
   if(str1.length!=str2.length) return false;
 
+  //remove all whitespace/linebreaks , convert  to lowercase for case insensitivity , split string into array coz sort function works on array, after sorting join  the  array 
   str1=str1.replace(/\s/g,'').toLowerCase().split('').sort().join('');
   str2=str2.replace(/\s/g,'').toLowerCase().split('').sort().join('');
 
