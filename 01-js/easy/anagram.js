@@ -17,3 +17,76 @@ function isAnagram(str1, str2) {
 }
 
 module.exports = isAnagram;
+
+
+
+
+
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+/*
+//check anagram without using any built-in functions
+function isAnagram(str1,str2) {
+
+  // Function to remove spaces from a string
+  function removeSpaces(input) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] !== ' ') {
+        result += input[i];
+      }
+    }
+    return result;
+  }
+  
+  // Function to convert a string to lowercase
+  function toLowerCase(input) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      // Check if the character is an uppercase letter
+      if (input[i] >= 'A' && input[i] <= 'Z') {
+        // Convert to lowercase by adding the ASCII difference
+        result += String.fromCharCode(input[i].charCodeAt(0) + 32);
+      } else {
+        result += input[i];
+      }
+    }
+    return result;
+  }
+  
+  // Function to check if two strings are anagrams
+  function checkAnagrams(str1, str2) {
+    // Remove spaces and convert to lowercase for case-insensitive comparison
+    str1 = toLowerCase(removeSpaces(str1));
+    str2 = toLowerCase(removeSpaces(str2));
+    
+    // Check if the lengths are the same
+    if (str1.length !== str2.length) {
+      return false;
+    }
+    
+    // Check if each character in str1 has a corresponding character in str2
+    for (let i = 0; i < str1.length; i++) {
+      let found = false;
+      for (let j = 0; j < str2.length; j++) {
+        if (str1[i] === str2[j]) {
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        return false;
+      }
+    }
+    
+    return true;
+  }
+  
+  // Call the function to check anagrams and return the result
+  return checkAnagrams(str1, str2);
+  
+}
+
+  */
